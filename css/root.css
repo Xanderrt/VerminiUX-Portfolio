@@ -1,0 +1,221 @@
+/* Fuente Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Colores */
+:root {
+    --blanco: #ffffff;
+    --negro: #2b2b2b;
+    --gris:#ededed;
+    --primario: #009E4E;
+    --secundario: #8EC044;
+    --terciario: #026839;
+    --degradado: linear-gradient(202deg,rgba(142, 192, 68, 1) 0%, rgba(58, 170, 53, 1) 100%);
+    --transparencia: rgba(0, 0, 0, 0.1);
+}
+
+/* Cajas */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{    
+    width: 144rem;
+    height: auto;
+}
+
+/* Texto */
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 7rem;
+    font-weight: 600;
+    color: var(--blanco);
+    line-height: 8.5rem;
+
+    text-shadow: 0 0.4rem 0.26rem var(--transparencia);
+}
+
+.hero-tittle{
+    font-size: 8rem;
+}
+
+h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--terciario);
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primario);
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--negro);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.card-text{
+    font-size: 1.6rem;
+}
+
+/* botones */
+
+button{
+    padding: 0.5rem 2rem;
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--blanco);
+
+    background-color: var(--primario);
+    border: 0.2rem solid var(--primario);
+    border-radius: 1.3rem;
+
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: var(--terciario);
+    border: 0.2rem solid var(--terciario);
+}
+
+.btn-alt{
+    padding: 0.5rem 2rem;
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--secundario);
+
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid var(--secundario);
+    border-radius: 1.3rem;
+
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.btn-alt:hover{
+    transform: scale(1.05);
+    color: var(--terciario);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid var(--terciario);
+}
+
+a{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--negro);
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* input */
+
+input{
+    padding: 1.2rem;
+    min-width: 70rem;
+    min-height: 5rem;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--negro);
+
+    border: none;
+    border-bottom: 0.1rem solid var(--gris) ;
+}
+
+input::placeholder{
+    color: var(--gris);
+}
+
+/* navbar */
+nav{
+    width: 144rem;
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3rem;
+
+}
+
+.menu-wrapper{  
+    width: 36.5rem;
+    height: 6.4rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    list-style: none;
+}
+
+.menu-wrapper li{
+    display: flex;
+}
+
+.menu-wrapper li a{
+    min-width: 15rem;
+    padding: 2rem 1.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 0.2rem solid var(--blanco);
+    color: var(--negro);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-wrapper li:hover a{
+    border-bottom: 0.2rem solid var(--terciario);
+    color: var(--terciario);
+}
+
+.menu-wrapper a.active,
+.menu-wrapper a[aria-current="page"] {
+    border-bottom: 0.2rem solid var(--terciario);
+    color: var(--terciario);
+    pointer-events: none;
+    cursor: default;
+}
