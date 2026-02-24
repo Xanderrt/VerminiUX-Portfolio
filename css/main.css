@@ -1,8 +1,7 @@
 /*  Hero Section  */
 #hero-section{
     width: 100vw;
-    min-height: 90vh;
-    
+    min-height: 90vh;    
 
     display: flex;
     justify-content: center;
@@ -12,30 +11,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.info-hero{
-    width: 144rem;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
-    padding: 3rem;
-    gap: 4rem;
-}
-
-.subtittle-wrapper{
-    padding: 0.3rem 2rem;
-
-    background-color: var(--terciario);
-    border-radius: 5rem;
-}
-
-.subtittle-wrapper h3{    
-    color: var(--blanco);
 }
 
 .btn-wrapper{
@@ -281,119 +256,4 @@
 
 .nombre-etiqueta p{
     color: var(--blanco);
-}
-
-/* CTA */
-#cta{
-    width: 100vw;
-    min-height: 50rem;
-    
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url(../img/CTA-section.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.cta-wrapper{
-    width: 144rem;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    gap: 4.8rem;
-}
-
-.tittle-cta{
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 2.4rem;
-}
-
-.text-btn-wrapper{
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 2.4rem 4rem;
-}
-
-.text-cta{
-    padding: 0 8rem;
-}
-
-.text-cta p{
-    font-weight: 600;
-    font-size: 2rem;
-
-    color: var(--blanco);
-}
-
-.blanco{
-    border: 0.2rem solid var(--blanco);
-    color: var(--blanco);
-}
-
-.blanco:hover{
-    border: 0.2rem solid var(--secundario);
-    color: var(--secundario);
-}
-
-/*  CTA  */
-
-footer{
-    width: 100vw;
-    min-height: 10rem;
-
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-}
-
-.footer-wrapper{
-    width: 144rem;
-    height: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    
-    padding: 2.4rem;
-}
-
-.social-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 6rem;
-}
-
-svg{
-    width: 4rem;
-    height: auto;
-
-    color: var(--terciario);
-
-    transition: 0.1s ease-in-out;
-}
-
-svg:hover{
-    color: var(--secundario);
-    transform: scale(1.1);
 }

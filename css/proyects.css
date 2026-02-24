@@ -1,0 +1,140 @@
+/* hero */
+#hero-galery{
+    width: 100vw;
+    min-height: 60.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/galeria/hero-section-galery.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-small{
+    justify-content: center;
+    align-items: center;
+}
+
+/* filters */
+#filters-section{
+    width: 144rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-bottom: 0.1rem solid var(--secundario);
+}
+
+.filters-bar{
+    padding: 2rem 0.8rem; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.6rem;
+}
+
+.etiqueta-filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 2rem;
+    padding: 0.4rem 2.8rem 0.4rem 1.4rem;
+    border: 0.1rem solid var(--secundario);
+    border-radius: 5rem;
+
+    background-color: transparent;
+    color: var(--secundario);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-software{
+    color: inherit;
+}
+
+.etiqueta-filtro svg{
+    color: inherit;
+    pointer-events: none;
+}
+
+.etiqueta-filtro svg path{
+    stroke: currentColor;
+}
+
+.etiqueta-filtro p{
+    color: currentColor;
+    font-weight: 600;
+}
+
+.etiqueta-filtro:hover,
+.etiqueta-filtro.active {
+    background-color: var(--primario);
+    border: 0.1rem solid var(--primario);
+    color: var(--blanco);
+}
+
+.etiqueta-filtro.active{
+    pointer-events: none;
+    cursor: none;
+}
+
+/*  Juegos  */
+#games-section{
+    width: 144rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2.4rem;    
+    padding: 6.4rem 1.2rem;
+}
+
+.tittle-wrapper{
+    width: 100%;
+    height: auto;
+
+    padding: 0 8.8rem 3.2rem 8.8rem;
+    border-bottom: 0.1rem solid var(--secundario);
+}
+
+.card-wrapper{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 3.2rem;
+}
+
+.game-card{
+    width: 60.5rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 3.2rem;
+    padding: 1.2rem;
+    background-color: var(--blanco);
+    border-radius: 2rem;
+
+    box-shadow: 0 0 1.5rem var(--transparencia);
+}
+
