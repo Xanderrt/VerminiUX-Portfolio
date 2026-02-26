@@ -88,7 +88,7 @@
 }
 
 /*  Juegos  */
-#games-section{
+.proyect-section{
     width: 144rem;
     height: auto;
 
@@ -109,7 +109,7 @@
     border-bottom: 0.1rem solid var(--secundario);
 }
 
-.card-wrapper{
+.cards-wrapper{
     width: 100%;
     height: auto;
 
@@ -130,7 +130,7 @@
     align-items: center;
     flex-direction: column;
 
-    gap: 3.2rem;
+    gap: 2.4rem;
     padding: 1.2rem;
     background-color: var(--blanco);
     border-radius: 2rem;
@@ -138,3 +138,121 @@
     box-shadow: 0 0 1.5rem var(--transparencia);
 }
 
+.img-card{
+    width: 99%;
+    height: fit-content;
+
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.img-card img{
+    width: 101%;
+    height: auto;
+
+    align-content: center;
+}
+
+.info-card{
+    width: 99%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 0 1.2rem 0.8rem 1.2rem;
+    gap: 2.4rem;
+}
+
+.tittle-card{
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 0.1rem solid var(--negro);
+}
+
+.tittle-card h3{
+    color: var(--negro);
+}
+
+.text-card{
+    line-height: 2rem;
+    min-height: 15rem;
+}
+
+.btn-card{
+    display: flex;
+    gap: 1.2rem;
+}
+
+/*  UX / UI  */
+.ux-card{
+    width: 40.4rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2.4rem;
+    padding: 1.2rem;
+    background-color: var(--blanco);
+    border-radius: 2rem;
+
+    box-shadow: 0 0 1.5rem var(--transparencia);
+}
+
+.text-card-ux{
+    line-height: 2rem;
+    min-height: 2.5rem;
+}
+
+/*  UX / UI  */
+
+.design-card{
+    width: 28rem;
+    height: 28rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1.2rem;
+    background-color: var(--blanco);
+    border-radius: 2rem;
+
+    box-shadow: 0 0 1.5rem var(--transparencia);
+
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.design-card:hover{
+    transform: scale(1.05);
+}
+
+/*  Motion  */
+.motion-card{
+    width: 60.5rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2.4rem;
+    padding: 1.2rem;
+    background-color: var(--blanco);
+    border-radius: 2rem;
+
+    box-shadow: 0 0 1.5rem var(--transparencia);
+}
+
+.text-card-ux{
+    line-height: 2rem;
+    min-height: 0.8rem;
+}
