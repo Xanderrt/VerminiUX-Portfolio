@@ -11,6 +11,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    z-index: 10;
 }
 
 .hero-small{
@@ -99,6 +101,22 @@
 
     gap: 2.4rem;    
     padding: 6.4rem 1.2rem;
+
+    background-color: var(--blanco);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    z-index: 1;
+}
+
+.proyect-section.hidden {
+    opacity: 0;
+    transform: translateY(2rem);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
 }
 
 .tittle-wrapper{
