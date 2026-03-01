@@ -105,7 +105,7 @@
     background-color: var(--blanco);
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 
     z-index: 1;
 }
@@ -199,6 +199,11 @@
     min-height: 15rem;
 }
 
+.btn-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+
 .btn-card{
     display: flex;
     gap: 1.2rem;
@@ -227,7 +232,7 @@
     min-height: 2.5rem;
 }
 
-/*  UX / UI  */
+/*  Design  */
 
 .design-card{
     width: 28rem;
@@ -270,7 +275,7 @@
     box-shadow: 0 0 1.5rem var(--transparencia);
 }
 
-.text-card-ux{
+.text-card-motion{
     line-height: 2rem;
     min-height: 0.8rem;
 }
