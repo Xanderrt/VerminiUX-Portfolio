@@ -211,6 +211,26 @@ input::placeholder{
     color: var(--gris);
 }
 
+textarea{
+    padding: 1.2rem;
+    min-width: 70rem;
+    min-height: 30rem;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--negro);
+
+    border: none;
+    border-bottom: 0.1rem solid var(--gris) ;
+
+    resize: none;
+}
+
+textarea::placeholder{
+    color: var(--gris);
+}
+
 /* navbar */
 nav{
     width: 144rem;

@@ -274,3 +274,96 @@
 .ai-description-wrapper p{
     line-height: 2rem;
 }
+
+/*  Contacto  */
+#hero-contact{
+     width: 100vw;
+    min-height: 60.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/contacto/hero-section-contact.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: 10;
+}
+
+.hero-small{
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-section{
+    width: 144rem;
+    height: auto;
+
+    display:grid;
+    grid-template-columns: 42.2rem 2fr 56rem;
+
+    gap:1.2rem;
+    padding: 3.6rem 1.2rem;
+
+    border-bottom: 0.1rem solid var(--secundario);
+}
+
+#contact-section h2{
+    font-size: 3.5rem;
+}
+
+.form-wrapper{
+    grid-area: 1/1/2/3;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 2.4rem;
+    padding: 2.4rem;
+}
+
+#contact-form{
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    margin-bottom: 2.4rem;
+}
+
+.cta-ws{
+    padding: 2.4rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2.4rem;
+}
+
+.btn-cta{
+    max-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem 2rem;
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--secundario);
+
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2rem solid var(--secundario);
+    border-radius: 5rem;
+
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
