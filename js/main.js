@@ -1,4 +1,4 @@
-import { games, uxProjects, designs, videos } from "../js/objetos.js";
+import { games, uxProjects, designs, videos } from "../objetos.js";
 
 //variantes
 //Filtros
