@@ -81,8 +81,14 @@ const postura = new VideoCard("img/galeria/tn-3.png", "Higiene Postural - J&T", 
 
 const visual = new VideoCard("img/galeria/tn-4.png", "Cuidado Visual - Autoboy", "Video musical, diseñado para sensibilizar a conductores sobre la importancia del cuidado visual y la prevención de riesgos en la vía.")
 
-export const games = [buscaRiesgos, quiz, concentrece, dragDrop];
-export const uxProjects = [calma, foxBox, tCarga];
-export const designs = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8];
-export const videos = [reel, alturas, postura, visual];
+//Arrays
+const games = [buscaRiesgos, quiz, concentrece, dragDrop];
 
+const uxProjects = [calma, foxBox, tCarga];
+
+const designs = [
+  imagen1, imagen2, imagen3, imagen4,
+  imagen5, imagen6, imagen7, imagen8
+];
+
+const videos = [reel, alturas, postura, visual];

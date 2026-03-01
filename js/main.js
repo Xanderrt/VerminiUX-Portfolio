@@ -1,5 +1,3 @@
-import { games, uxProjects, designs, videos } from "./objetos.js";
-
 //variantes
 //Filtros
 const filters = document.querySelectorAll(".etiqueta-filtro");
@@ -73,6 +71,8 @@ filters.forEach(filter => {
         }
     });
 });
+
+//objetos
 
 /*  Renderizar tarjetas  */
 /* Juegos */
@@ -200,11 +200,25 @@ function renderVideos() {
     });
 }
 
-renderGames();
-renderUx();
-renderDesigns();
-renderVideos();
+document.addEventListener("DOMContentLoaded", () => {
 
+  if (document.getElementById("games-container")) {
+    renderGames();
+  }
+
+  if (document.getElementById("ux-container")) {
+    renderUx();
+  }
+
+  if (document.getElementById("design-container")) {
+    renderDesigns();
+  }
+
+  if (document.getElementById("video-container")) {
+    renderVideos();
+  }
+
+});
 
 
 
