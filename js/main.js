@@ -10,6 +10,21 @@ const sectionMap = {
     "motion": "motion-section"
 };
 
+//Galeria diseño
+const designModal = document.getElementById("design-modal");
+const designModalImg = document.querySelector(".design-modal-img");
+const designModalText = document.querySelector(".design-modal-text");
+
+let currentIndex = 0;
+
+const leftArrow = document.querySelector(".nav-arrow.left");
+const rightArrow = document.querySelector(".nav-arrow.right");
+
+//Galeria motion
+const videoModal = document.getElementById("video-modal");
+const videoWrapper = document.querySelector(".video-wrapper");
+const closeVideo = document.querySelector(".close-video");
+
 // comportamiento del Menú
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -156,6 +171,10 @@ function createDesignCard(card) {
         </div>
     `;
 
+    article.addEventListener("click", ()=>{
+        openDesignModal(card.img, card.text);
+    });
+
     return article;
 }
 
@@ -163,10 +182,80 @@ function renderDesigns() {
     const container = document.getElementById("design-container");
     container.innerHTML = "";
 
-    designs.forEach(design => {
-        container.appendChild(createDesignCard(design));
+    designs.forEach((design, index) => {
+        const card = createDesignCard(design);
+
+        card.addEventListener("click", ()=>{
+            openDesignModalByIndex(index);
+        });
+
+        container.appendChild(card);
     });
 }
+
+function openDesignModal(img, text){
+    designModalImg.src = img;
+    designModalText.textContent = text;
+    designModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeDesignModal(){
+    designModal.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+designModal.addEventListener("click", (e)=>{
+    if(e.target === designModal){
+        closeDesignModal();
+    }
+});
+
+function openDesignModalByIndex(index){
+    currentIndex = index;
+
+    designModalImg.src = designs[currentIndex].img;
+    designModalText.textContent = designs[currentIndex].text;
+
+    designModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function changeImage(direction){
+
+    const modalBox = document.querySelector(".design-modal-box");
+
+    modalBox.classList.add("fade-out");
+
+    setTimeout(()=>{
+
+        currentIndex += direction;
+
+        if(currentIndex < 0){
+            currentIndex = designs.length - 1;
+        }
+
+        if(currentIndex >= designs.length){
+            currentIndex = 0;
+        }
+
+        designModalImg.src = designs[currentIndex].img;
+        designModalText.textContent = designs[currentIndex].text;
+
+        modalBox.classList.remove("fade-out");
+
+    }, 300);
+}
+
+leftArrow.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    changeImage(-1);
+});
+
+rightArrow.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    changeImage(1);
+});
 
 
 /* Motion */
@@ -175,8 +264,11 @@ function createVideoCard(card) {
     article.classList.add("motion-card");
 
     article.innerHTML = `
-        <div class="img-card">
+        <div class="img-card motion-thumb">
             <img src="${card.img}" alt="${card.tittle}">
+            <div class="motion-overlay">
+                <span class="play-icon">▶</span>
+            </div>
         </div>
         <div class="info-card">
             <div class="tittle-card">    
@@ -187,6 +279,9 @@ function createVideoCard(card) {
             </div>  
         </div>
     `;
+
+    article.querySelector(".motion-thumb")
+        .addEventListener("click", () => openVideoModal(card.video));
 
     return article;
 }
@@ -199,6 +294,31 @@ function renderVideos() {
         container.appendChild(createVideoCard(video));
     });
 }
+
+function openVideoModal(src){
+    videoWrapper.innerHTML = `
+        <video controls autoplay>
+            <source src="${src}" type="video/mp4">
+        </video>
+    `;
+
+    videoModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeVideoModal(){
+    videoModal.classList.remove("active");
+    videoWrapper.innerHTML = "";
+    document.body.style.overflow = "";
+}
+
+closeVideo.addEventListener("click", closeVideoModal);
+
+videoModal.addEventListener("click", (e)=>{
+    if(e.target === videoModal){
+        closeVideoModal();
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 

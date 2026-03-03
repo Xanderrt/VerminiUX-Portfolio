@@ -27,10 +27,11 @@ class DesignCard {
 }
 
 class VideoCard {
-    constructor(img, tittle, text){
+    constructor(img, tittle, text, video){
         this.img = img;
         this.tittle = tittle;
         this.text = text;
+        this.video = video;
     }
 }
 
@@ -73,13 +74,13 @@ const imagen8 = new DesignCard("img/galeria/mini-galery-8.png", "Este será el t
 
 // video
 
-const reel = new VideoCard("img/galeria/tn-1.png", "Reel de animación", "Una muestra de animación 2D enfocada en dar vida a ideas a través de narrativa, ritmo y expresión visual.")
+const reel = new VideoCard("img/galeria/tn-1.png", "Reel de animación", "Una muestra de animación 2D enfocada en dar vida a ideas a través de narrativa, ritmo y expresión visual.", "video/Reel-Animación-LQ.mp4")
 
-const alturas = new VideoCard("img/galeria/tn-2.png", "Alturas Seguras - Terratest", "Cápsula educativa desarrollada para Terratest, orientada a comunicar los principales riesgos y medidas de prevención.")
+const alturas = new VideoCard("img/galeria/tn-2.png", "Alturas Seguras - Terratest", "Cápsula educativa desarrollada para Terratest, orientada a comunicar los principales riesgos y medidas de prevención.", "video/Alturas-Seguras-LQ.mp4")
 
-const postura = new VideoCard("img/galeria/tn-3.png", "Higiene Postural - J&T", "Desarrollado para entornos móviles, orientado a promover hábitos saludables a trabajadores en modalidad home office.")
+const postura = new VideoCard("img/galeria/tn-3.png", "Higiene Postural - J&T", "Desarrollado para entornos móviles, orientado a promover hábitos saludables a trabajadores en modalidad home office.", "video/Higiene-Postural-LQ.mp4")
 
-const visual = new VideoCard("img/galeria/tn-4.png", "Cuidado Visual - Autoboy", "Video musical, diseñado para sensibilizar a conductores sobre la importancia del cuidado visual y la prevención de riesgos en la vía.")
+const visual = new VideoCard("img/galeria/tn-4.png", "Cuidado Visual - Autoboy", "Video musical, diseñado para sensibilizar a conductores sobre la importancia del cuidado visual y la prevención de riesgos en la vía.", "video/Rap-Cuidado-Visual-LQ.mp4")
 
 //Arrays
 const games = [buscaRiesgos, quiz, concentrece, dragDrop];

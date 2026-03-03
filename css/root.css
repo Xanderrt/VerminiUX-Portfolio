@@ -7,11 +7,13 @@
     --blanco: #ffffff;
     --negro: #2b2b2b;
     --gris:#ededed;
+    --gris2: #b1b1b1;
     --primario: #009E4E;
     --secundario: #8EC044;
     --terciario: #026839;
     --degradado: linear-gradient(202deg,rgba(142, 192, 68, 1) 0%, rgba(58, 170, 53, 1) 100%);
     --transparencia: rgba(0, 0, 0, 0.1);
+    --transparencia2: rgba(0, 0, 0, 0.5);
 }
 
 /* Cajas */
@@ -204,11 +206,11 @@ input{
     color: var(--negro);
 
     border: none;
-    border-bottom: 0.1rem solid var(--gris) ;
+    border-bottom: 0.1rem solid var(--gris2) ;
 }
 
 input::placeholder{
-    color: var(--gris);
+    color: var(--gris2);
 }
 
 textarea{
@@ -222,13 +224,13 @@ textarea{
     color: var(--negro);
 
     border: none;
-    border-bottom: 0.1rem solid var(--gris) ;
+    border-bottom: 0.1rem solid var(--gris2) ;
 
     resize: none;
 }
 
 textarea::placeholder{
-    color: var(--gris);
+    color: var(--gris2);
 }
 
 /* navbar */
