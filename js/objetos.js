@@ -56,21 +56,21 @@ const tCarga = new UxCard("img/galeria/ux-t-carga.png", "T-Carga", "Tipo: App", 
 
 // Diseño
 
-const imagen1 = new DesignCard("img/galeria/mini-galery-1.png", "Este será el texto de la galeria expandida 1")
+const imagen1 = new DesignCard("img/galeria/mini-galery-1.png", "Piezas gráficas para Redes Sociales, diseñadas para la campaña Yo te cuido, tu me cuidas, de Siemens Energy.")
 
-const imagen2 = new DesignCard("img/galeria/mini-galery-2.png", "Este será el texto de la galeria expandida 2")
+const imagen2 = new DesignCard("img/galeria/mini-galery-2.png", "Pieza gráfica diseñada para impresión, para Este es mi Bus, contratista de Transmilenio.")
 
-const imagen3 = new DesignCard("img/galeria/mini-galery-3.png", "Este será el texto de la galeria expandida 3")
+const imagen3 = new DesignCard("img/galeria/mini-galery-3.png", "Libro de Procedimientos Seguros en Cocina, diseñado para Cafam.")
 
-const imagen4 = new DesignCard("img/galeria/mini-galery-4.png", "Este será el texto de la galeria expandida 4")
+const imagen4 = new DesignCard("img/galeria/mini-galery-4.png", "Pieza digital, diseñada para divulgación en pantallas del centro comercial Plaza Claro.")
 
-const imagen5 = new DesignCard("img/galeria/mini-galery-5.png", "Este será el texto de la galeria expandida 5")
+const imagen5 = new DesignCard("img/galeria/mini-galery-5.png", "Logo diseñado para T-carga, aplicación costarricense de envios.")
 
-const imagen6 = new DesignCard("img/galeria/mini-galery-6.png", "Este será el texto de la galeria expandida 6")
+const imagen6 = new DesignCard("img/galeria/mini-galery-6.png", "Mock up de tarjeta de presentación, diseñadas para Publiart Colors, empresa de artes gráficas.")
 
-const imagen7 = new DesignCard("img/galeria/mini-galery-7.png", "Este será el texto de la galeria expandida 7")
+const imagen7 = new DesignCard("img/galeria/mini-galery-7.png","Rediseño de Logotipo, para Publiart Colors.")
 
-const imagen8 = new DesignCard("img/galeria/mini-galery-8.png", "Este será el texto de la galeria expandida 8")
+const imagen8 = new DesignCard("img/galeria/mini-galery-8.png", "Piezas de divulgación digital, diseñada para Global Growth, empresa de asesoria.")
 
 // video
 
@@ -92,4 +92,4 @@ const designs = [
   imagen5, imagen6, imagen7, imagen8
 ];
 
-const videos = [reel, alturas, postura, visual];
+const videos = [reel, visual, postura, alturas];

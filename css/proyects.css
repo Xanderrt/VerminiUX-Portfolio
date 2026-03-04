@@ -102,7 +102,6 @@
     gap: 2.4rem;    
     padding: 6.4rem 1.2rem;
 
-    background-color: var(--blanco);
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -260,15 +259,19 @@
 .design-modal{
     position: fixed;
     inset: 0;
+
     background: var(--transparencia2);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    padding: 2rem;
+
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
+
     z-index: 99;
 }
 
@@ -279,13 +282,21 @@
 
 .design-modal-box{
     position: relative;
-    max-width: 80rem;
-    width: 80%;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
     overflow: hidden;
     border-radius: 2rem;
 
+    background: transparent;
+
     transform: scale(1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .design-modal-box.fade-out{
@@ -299,9 +310,15 @@
 }
 
 .design-modal-img{
-    width: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
     height: auto;
+
+    object-fit: contain;
     display: block;
+    border-radius: 2rem;
 }
 
 .nav-arrow{
@@ -315,7 +332,7 @@
 
     background: rgba(0,0,0,0);
     border: none;
-    color: var(--blanco);
+    color: var(--gris2);
     font-size: 3rem;
     padding: 1rem;
     cursor: pointer;
@@ -341,17 +358,26 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    min-height: 10%;
+    align-content: center;
 
-    padding: 2rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
+
     background: linear-gradient(
         to top,
-        var(--negro),
-        rgba(0,0,0,0)
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0)
     );
+
+    pointer-events: none;
 }
 
 .design-modal-overlay p{
     color: var(--blanco);
+    line-height: 2.2rem;
+    text-shadow: 0.1rem 0.1rem 0 var(--transparencia);
 }
 
 /*  Motion  */
@@ -374,7 +400,8 @@
 
 .text-card-motion{
     line-height: 2rem;
-    min-height: 0.8rem;
+    height: 7rem;
+    min-height: 7rem;
 }
 
 .motion-thumb{
@@ -465,13 +492,35 @@
     width: auto;
     height: auto;
     display: block;
+    
+    border-radius: 1.5rem;
 }
 
 .close-video{
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    min-height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primario);
+    border-radius: 2rem;
+
     position: absolute;
-    top: -3rem;
-    right: 0;
-    font-size: 2rem;
-    color: white;
+    top: -0.5rem;
+    right: -0.5rem;
+
+    font-size: 2.5rem;
+    color: var(--blanco);
     cursor: pointer;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.close-video:hover{
+    transform: scale(1.05);
+    background: var(--terciario);
 }
