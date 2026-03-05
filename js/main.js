@@ -1,4 +1,8 @@
 //variantes
+//Navbar
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu-wrapper");
+
 //Filtros
 const filters = document.querySelectorAll(".etiqueta-filtro");
 const sections = document.querySelectorAll(".proyect-section");
@@ -26,6 +30,10 @@ const videoWrapper = document.querySelector(".video-wrapper");
 const closeVideo = document.querySelector(".close-video");
 
 // comportamiento del Menú
+hamburger.addEventListener("click", ()=>{
+    menu.classList.toggle("show");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
   let currentPath = window.location.pathname.split("/").pop();

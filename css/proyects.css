@@ -22,8 +22,9 @@
 
 /* filters */
 #filters-section{
-    width: 144rem;
-    height: auto;
+    width: 99%;
+    max-width: 144rem;
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
@@ -91,8 +92,9 @@
 
 /*  Juegos  */
 .proyect-section{
-    width: 144rem;
-    height: auto;
+    width: 99%;
+    max-width: 144rem;
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
@@ -523,4 +525,81 @@
 .close-video:hover{
     transform: scale(1.05);
     background: var(--terciario);
+}
+
+@media (max-width: 768px) {
+  /*  Filtros  */
+  .filters-bar{
+      gap: 0.8rem;
+  }
+
+  .etiqueta-filtro{
+      padding: 0.4rem 0.4rem 0.4rem 0.4rem;;
+  }
+
+  .nombre-software{
+      display: none;
+  }
+
+  /* Titulos Seccion */
+   .tittle-wrapper {
+      padding: 0 2rem 2rem 2rem;
+      text-align: center;
+  }
+
+  /* Juegos y Motion */
+  .game-card,
+  .motion-card {
+      width: 100%;
+      gap: 1.6rem;
+  }
+
+  .cards-wrapper {
+      flex-direction: column;
+      gap: 2.4rem;
+  }
+
+  /* UX */
+  .ux-card {
+      width: 100%;
+  }
+
+  /*  Diseño  */
+  .cards-wrapper-mobile{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+  }
+
+  .design-card{
+      width: 100%;
+      height: unset;
+      aspect-ratio: 1 / 1;
+      padding: 0.8rem;
+      overflow: hidden;
+      border-radius: 1.5rem;
+  }
+
+  .design-card .img-card{
+      width: 100%;
+      height: 100%;
+  }
+
+  .design-card .img-card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+  }
+
+  /* Motion */
+  .video-modal-box {
+      width: 95%;
+      max-width: none;
+  }
+
+  .video-wrapper video {
+      width: 100%;
+      height: auto;
+  }
 }
