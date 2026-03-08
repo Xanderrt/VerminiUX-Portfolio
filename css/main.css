@@ -124,7 +124,7 @@
 }
 
 .img-wrapper{
-    width:fit-content;
+    width:100%;
     height: auto;
 
     display: flex;
@@ -133,6 +133,11 @@
 
     border-radius: 1rem;
     overflow: hidden;
+}
+
+.img-wrapper img{
+    width: 100%t;
+    height: 100%;
 }
 
 .info-proyect{
@@ -454,6 +459,16 @@
     .procesos-wrapper{
         flex-wrap: wrap;
     }
+}
+
+@media (max-width: 1024px) {
+
+  /* Stack */
+.stack-wrapper{
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 }
 
 

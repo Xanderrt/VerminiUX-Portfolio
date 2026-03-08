@@ -520,11 +520,26 @@
     cursor: pointer;
 
     transition: transform 0.2s ease, background 0.2s ease;
+
+    z-index: 99;
 }
 
 .close-video:hover{
     transform: scale(1.05);
     background: var(--terciario);
+}
+
+@media (max-width: 1024px) {
+
+ .filters-bar{
+      gap: 0.8rem;
+  }
+
+  .etiqueta-filtro{
+      padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+      gap: 0rem;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -534,7 +549,7 @@
   }
 
   .etiqueta-filtro{
-      padding: 0.4rem 0.4rem 0.4rem 0.4rem;;
+      padding: 0.4rem 0.4rem 0.4rem 0.4rem;
   }
 
   .nombre-software{
