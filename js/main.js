@@ -14,6 +14,41 @@ const sectionMap = {
     "motion": "motion-section"
 };
 
+// Botón volver arriba
+document.addEventListener("DOMContentLoaded", () => {
+    const btnVolverArriba = document.getElementById("btnVolverArriba");
+    
+    // Hacemos el selector dinámico: buscará el #hero-section, o por defecto, 
+    // la primera <section> que encuentre dentro del <main> de cualquier página.
+    const heroSection = document.querySelector("#hero-section, main.page-content > section:first-of-type"); 
+
+    if (heroSection && btnVolverArriba) {
+        const observer = new IntersectionObserver((entries) => {
+            const [entry] = entries;
+            
+            if (!entry.isIntersecting) {
+                btnVolverArriba.classList.add("mostrar");
+            } else {
+                btnVolverArriba.classList.remove("mostrar");
+            }
+        }, {
+            root: null,
+            threshold: 0
+        });
+
+        observer.observe(heroSection);
+    }
+
+    if (btnVolverArriba) {
+        btnVolverArriba.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+});
+
 //Galeria diseño
 const designModal = document.getElementById("design-modal");
 const designModalImg = document.querySelector(".design-modal-img");

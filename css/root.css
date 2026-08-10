@@ -38,6 +38,28 @@ body{
     flex-direction: column;
 }
 
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
 section{    
     max-width: 100%;
     margin: 0 auto;
@@ -193,6 +215,51 @@ a{
 
 a:hover{
     cursor: pointer;
+}
+
+/* Volver arriba */
+.btn-volver-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background-color: var(--primario);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, background-color 0.3s ease;
+}
+
+.btn-volver-arriba.mostrar {
+    opacity: 0.4;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-volver-arriba:hover {
+    opacity: 1;
+    background-color: var(--terciario);
+    transform: translateY(-5px);
+}
+
+.btn-volver-arriba img{
+    width: 85%;
+    height: auto;
 }
 
 /* input */
@@ -459,6 +526,13 @@ p{
     font-size: 1.6rem;
 }
 
+/* Boton-volver-arriba */
+.btn-volver-arriba {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+}
 
 /* Nav bar */    
 nav{
